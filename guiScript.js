@@ -1,7 +1,6 @@
 ﻿#pragma strict
 
-var healthBar:UI.RawImage;
-var heartBar:UI.RawImage;
+var healthBar:UI.RawImage;;
 
 function Update () {
 	var player = GameObject.FindGameObjectWithTag("Player").GetComponent(playerScript);

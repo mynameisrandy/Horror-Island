@@ -3,7 +3,7 @@
 import System.Collections.Generic;
 
 private var health:float = 100;
-//var fire = GameObject.FindGameObjectWithTag("Player").GetComponent(FireScript);
+var fire = GameObject.FindGameObjectWithTag("Player").Find("CSharpGameObj").GetComponent("FireScript");
 
 var inventory = new Dictionary.<String,int>();
 inventory["wood"] = 0;
@@ -27,9 +27,9 @@ function Update() {
 		Application.LoadLevel("Finish");
 	}
 	
-	//if(Input.GetKeyDown(KeyCode.LeftShift)){;
-        //fire.BeginEffect();
-    //}
+	if(Input.GetKeyDown(KeyCode.LeftShift)){
+		fire.BeginEffect();
+    }
 }
 
 function reduceHealth(){

@@ -67,7 +67,7 @@ function OnTriggerEnter(other:Collider) {
 		inventory["total"] += 1;
 		Destroy(other.gameObject);
 
-		GameObject.FindGameObjectWithTag("wire_ui").GetComponent(UI.RawImage).texture = Resources.Load("Wire_E", typeof(Texture)) as Texture;
+		GameObject.FindGameObjectWithTag("wire_ui").GetComponent(UI.RawImage).texture = Resources.Load("Wire_E 1", typeof(Texture)) as Texture;
 	}
 
 	// Nail
@@ -76,7 +76,7 @@ function OnTriggerEnter(other:Collider) {
 		inventory["total"] += 1;
 		Destroy(other.gameObject);
 
-		GameObject.FindGameObjectWithTag("nails_ui").GetComponent(UI.RawImage).texture = Resources.Load("Bolt_E", typeof(Texture)) as Texture;
+		GameObject.FindGameObjectWithTag("nail_ui").GetComponent(UI.RawImage).texture = Resources.Load("Nail_E", typeof(Texture)) as Texture;
 	}
 
 	// Hacksaw

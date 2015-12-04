@@ -97,4 +97,13 @@ function OnTriggerEnter(other:Collider) {
 
 		GameObject.FindGameObjectWithTag("hammer_ui").GetComponent(UI.RawImage).texture = Resources.Load("Hammer_E", typeof(Texture)) as Texture;
 	}
+	
+	
+	// Health
+	if(other.tag == "health") {
+		health++;
+		Debug.Log(health);
+		Destroy(other.gameObject);
+	}
+	
 }

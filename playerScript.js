@@ -20,7 +20,7 @@ function Update() {
 	if(health == 0){
 		Application.LoadLevel("GameOver");
 	}
-	
+		
 	// If Player Collects all 6 Items, you win!
 	if(inventory["total"] == 6){
 		Application.LoadLevel("Finish");
@@ -41,9 +41,15 @@ function getHealth(){
 	return health;
 }
 
-// Pick Up Items
+// Pick Up Items and Health
 function OnTriggerEnter(other:Collider) {
-
+	
+	if (other.tag == "healthpack" && health < 100) {
+		health++;
+		Destroy(other.gameObject);
+	}
+	
+	
 	// wood
 	if(other.tag == "wood") {
 		inventory["wood"] += 1;

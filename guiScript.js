@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 var healthBar:UI.RawImage;
-var help:UI.Text;
+var help:UI.RawImage;
 
 function Awake(){
 	help.enabled = false;

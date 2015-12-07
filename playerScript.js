@@ -27,8 +27,11 @@ function Update() {
 	}
 	
 	if(Input.GetKeyDown(KeyCode.LeftShift)){
-		var cs = GameObject.Find("CSharpGameObj");
-        var script = cs.GetComponent("FireScript");
+		//var laserEyes = GameObject.FindGameObjectWithTag("Player").GetComponent(FireScript);
+		//Debug.Log(laserEyes.score); //call variable
+		//laserEyes.BeginEffect(); //call function
+		//var cs = GameObject.Find("CSharpGameObj");
+        //var script = cs.GetComponent("FireScript");
         //script.BeginEffect();
     }
 }
@@ -43,13 +46,7 @@ function getHealth(){
 
 // Pick Up Items and Health
 function OnTriggerEnter(other:Collider) {
-	
-	if (other.tag == "healthpack" && health < 100) {
-		health++;
-		Destroy(other.gameObject);
-	}
-	
-	
+		
 	// wood
 	if(other.tag == "wood") {
 		inventory["wood"] += 1;
@@ -106,10 +103,20 @@ function OnTriggerEnter(other:Collider) {
 	
 	
 	// Health
-	if(other.tag == "health") {
+	if(other.tag == "healthpack") {
 		health++;
 		Debug.Log(health);
 		Destroy(other.gameObject);
+	}
+	
+	if (other.tag == "healthpack" && health > 100) {
+		health++;
+		Destroy(other.gameObject);
+	} 
+	else if (other.tag == "healthpack" && health < 100)
+	{
+		Destroy(other.gameObject);
+		print("My health is " + health);
 	}
 	
 }

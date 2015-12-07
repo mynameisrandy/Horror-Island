@@ -26,14 +26,14 @@ function Update() {
 		Application.LoadLevel("Finish");
 	}
 	
-	if(Input.GetKeyDown(KeyCode.LeftShift)){
+	//if(Input.GetKeyDown(KeyCode.LeftShift)){
 		//var laserEyes = GameObject.FindGameObjectWithTag("Player").GetComponent(FireScript);
 		//Debug.Log(laserEyes.score); //call variable
 		//laserEyes.BeginEffect(); //call function
 		//var cs = GameObject.Find("CSharpGameObj");
         //var script = cs.GetComponent("FireScript");
         //script.BeginEffect();
-    }
+    //}
 }
 
 function reduceHealth(){

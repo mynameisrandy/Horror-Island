@@ -4,6 +4,10 @@ function introScreen() {
 	Application.LoadLevel("Intro");
 }
 
+function startStory() {
+	Application.LoadLevel("Story");
+}
+
 function startGame() {
 	Application.LoadLevel("Main");
 }

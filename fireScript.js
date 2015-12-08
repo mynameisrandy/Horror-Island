@@ -9,7 +9,19 @@ function Update () {
 	if(Input.GetButton("Fire1") && Time.time > nextFire){
 		nextFire = Time.time + fireRate;
 		var clone : GameObject = Instantiate(projectile, transform.position, transform.rotation);
-		clone.GetComponent.<Rigidbody>().velocity = transform.TransformDirection(Vector3(0,0,speed));
+		clone.GetComponent.<Rigidbody>().velocity = transform.TransformDirection(Vector3(30,0,speed));
 		Physics.IgnoreCollision(clone.GetComponent.<Collider>(), transform.root.GetComponent.<Collider>());
 	}
+}
+
+
+
+// Shoot at the vehicles and Destroy
+function OnTriggerEnter(other:Collider) {
+
+	if (other.tag == "car")
+	{
+		Destroy(other.gameObject);
+	}
+
 }

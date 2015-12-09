@@ -3,7 +3,6 @@
 import System.Collections.Generic;
 
 private var health:float = 100;
-// public var health : int = 100;
 
 var inventory = new Dictionary.<String,int>();
 inventory["wood"] = 0;
@@ -94,22 +93,23 @@ function OnTriggerEnter(other:Collider) {
 	}
 	
 	
+	// Health
 	if (other.tag == "healthpack" && health < 100)
 	{
 		health++;
 		Destroy(other.gameObject);
-		print("My health is " + health);
+		//print("My health is " + health);
 	}
 		
 	if (other.tag == "healthpack" && health == 100) {
-		print("Can't Gain Health no more");
+		health = 100;
 	} 
 	
-	// Camp fire damage
-	if (other.tag == "campFire") 
+	//Damage
+	if (other.tag == "campFire" || other.tag == "Ghoul") 
 	{
-		health --;
-		print("OUCH, THAT HURTS");
+		reduceHealth();
+		//print("OUCH, THAT HURTS");
 	}
 	
 }

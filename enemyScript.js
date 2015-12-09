@@ -1,9 +1,9 @@
 ﻿#pragma strict
 
-private var enemyHealth : int = 5;
+private var enemyHealth : int = 10;
 
 var waypoint : Transform[]; // Empty array of transform, will hold waypoints
-var speed : float = 10; // Speed pf enemy
+private var speed : float = 2; // Speed of enemy
 private var currentWaypoint : int; // Hold Current value of waypoint
 
 

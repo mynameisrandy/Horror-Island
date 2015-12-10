@@ -107,7 +107,6 @@ function OnTriggerEnter(other:Collider) {
 			health = 100;
 		}
 		Destroy(other.gameObject);
-		//print("My health is " + health);
 	}
 		
 	if (other.tag == "healthpack" && health == 100) {
@@ -115,10 +114,14 @@ function OnTriggerEnter(other:Collider) {
 	} 
 	
 	//Damage
-	if (other.tag == "campFire" || other.tag == "Ghoul" || other.tag == "Water") 
+	if (other.tag == "campFire" || other.tag == "Water") 
 	{
 		reduceHealth();
-		//print("OUCH, THAT HURTS");
+	}
+	
+	if (other.tag == "Ghoul") 
+	{
+		health -= 5;
 	}
 	
 }

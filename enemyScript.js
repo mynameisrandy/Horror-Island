@@ -1,17 +1,14 @@
 ﻿#pragma strict
 
-private var enemyHealth : int = 10;
+private var enemyHealth : int = 5;
 
 var waypoint : Transform[]; // Empty array of transform, will hold waypoints
-private var speed : float = 2; // Speed of enemy
+private var speed : float = 1; // Speed of enemy
 private var currentWaypoint : int; // Hold Current value of waypoint
 
 
 
 function Update () {
-	if(enemyHealth == 0){
-		Destroy(gameObject);
-	}
 	
 	
 	// currentWaypoint less then waypoint.length run this code
@@ -40,4 +37,8 @@ function Update () {
 
 function reduceHealth(){
 	enemyHealth--;
+	if(enemyHealth == 0){
+		Destroy(gameObject);
+	}
+	//Debug.Log(enemyHealth);
 }

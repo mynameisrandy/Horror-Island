@@ -106,7 +106,7 @@ function OnTriggerEnter(other:Collider) {
 	} 
 	
 	//Damage
-	if (other.tag == "campFire" || other.tag == "Ghoul") 
+	if (other.tag == "campFire" || other.tag == "Ghoul" || other.tag == "Water") 
 	{
 		reduceHealth();
 		//print("OUCH, THAT HURTS");

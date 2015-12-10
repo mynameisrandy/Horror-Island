@@ -97,6 +97,9 @@ function OnTriggerEnter(other:Collider) {
 	if (other.tag == "healthpack" && health < 100)
 	{
 		health += 5;
+		if(health > 100){
+			health = 100;
+		}
 		Destroy(other.gameObject);
 		//print("My health is " + health);
 	}

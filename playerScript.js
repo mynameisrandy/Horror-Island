@@ -13,7 +13,7 @@ inventory["axe"] = 0;
 inventory["nails"] = 0;
 inventory["total"] = 0;
 
-InvokeRepeating("reduceHealth",120,120);
+InvokeRepeating("reduceHealth",15,15);
 
 function Update() {
 	// If Health is 0, Game Over
@@ -42,6 +42,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "wood") {
 		inventory["wood"] += 1;
 		inventory["total"] += 1;
+		Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("wood_ui").GetComponent(UI.RawImage).texture = Resources.Load("Wood_E", typeof(Texture)) as Texture;
@@ -51,6 +52,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "axe") {
 		inventory["axe"] += 1;
 		inventory["total"] += 1;
+		Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("axe_ui").GetComponent(UI.RawImage).texture = Resources.Load("Axe_E", typeof(Texture)) as Texture;
@@ -60,6 +62,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "wire") {
 		inventory["wire"] += 1;
 		inventory["total"] += 1;
+		Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("wire_ui").GetComponent(UI.RawImage).texture = Resources.Load("Wire_E 1", typeof(Texture)) as Texture;
@@ -69,6 +72,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "nail") {
 		inventory["nails"] += 1;
 		inventory["total"] += 1;
+		Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("nail_ui").GetComponent(UI.RawImage).texture = Resources.Load("Nail_E", typeof(Texture)) as Texture;
@@ -78,6 +82,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "hacksaw") {
 		inventory["hacksaw"] += 1;
 		inventory["total"] += 1;
+		Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("hacksaw_ui").GetComponent(UI.RawImage).texture = Resources.Load("HackSaw_E", typeof(Texture)) as Texture;
@@ -87,6 +92,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "hammer") {
 		inventory["hammer"] += 1;
 		inventory["total"] += 1;
+		Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("hammer_ui").GetComponent(UI.RawImage).texture = Resources.Load("Hammer_E", typeof(Texture)) as Texture;

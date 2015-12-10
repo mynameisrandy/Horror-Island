@@ -42,7 +42,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "wood") {
 		inventory["wood"] += 1;
 		inventory["total"] += 1;
-		Debug.Log(inventory["total"]);
+		//Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("wood_ui").GetComponent(UI.RawImage).texture = Resources.Load("Wood_E", typeof(Texture)) as Texture;
@@ -52,7 +52,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "axe") {
 		inventory["axe"] += 1;
 		inventory["total"] += 1;
-		Debug.Log(inventory["total"]);
+		//Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("axe_ui").GetComponent(UI.RawImage).texture = Resources.Load("Axe_E", typeof(Texture)) as Texture;
@@ -62,7 +62,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "wire") {
 		inventory["wire"] += 1;
 		inventory["total"] += 1;
-		Debug.Log(inventory["total"]);
+		//Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("wire_ui").GetComponent(UI.RawImage).texture = Resources.Load("Wire_E 1", typeof(Texture)) as Texture;
@@ -72,7 +72,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "nail") {
 		inventory["nails"] += 1;
 		inventory["total"] += 1;
-		Debug.Log(inventory["total"]);
+		//Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("nail_ui").GetComponent(UI.RawImage).texture = Resources.Load("Nail_E", typeof(Texture)) as Texture;
@@ -82,7 +82,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "hacksaw") {
 		inventory["hacksaw"] += 1;
 		inventory["total"] += 1;
-		Debug.Log(inventory["total"]);
+		//Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("hacksaw_ui").GetComponent(UI.RawImage).texture = Resources.Load("HackSaw_E", typeof(Texture)) as Texture;
@@ -92,7 +92,7 @@ function OnTriggerEnter(other:Collider) {
 	if(other.tag == "hammer") {
 		inventory["hammer"] += 1;
 		inventory["total"] += 1;
-		Debug.Log(inventory["total"]);
+		//Debug.Log(inventory["total"]);
 		Destroy(other.gameObject);
 
 		GameObject.FindGameObjectWithTag("hammer_ui").GetComponent(UI.RawImage).texture = Resources.Load("Hammer_E", typeof(Texture)) as Texture;
@@ -102,7 +102,7 @@ function OnTriggerEnter(other:Collider) {
 	// Health
 	if (other.tag == "healthpack" && health < 100)
 	{
-		health += 5;
+		health++;
 		if(health > 100){
 			health = 100;
 		}

@@ -17,7 +17,7 @@ InvokeRepeating("reduceHealth",15,15);
 
 function Update() {
 	// If Health is 0, Game Over
-	if(health == 0){
+	if(health <= 0){
 		Application.LoadLevel("GameOver");
 	}
 		

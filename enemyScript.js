@@ -41,3 +41,10 @@ function reduceHealth(){
 	}
 	//Debug.Log(enemyHealth);
 }
+
+function OnTriggerEnter(other:Collider) {
+	
+	if(other.tag == "Fire") {;
+		reduceHealth();
+	}
+}

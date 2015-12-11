@@ -10,7 +10,6 @@ private var currentWaypoint : int; // Hold Current value of waypoint
 
 function Update () {
 	
-	
 	// currentWaypoint less then waypoint.length run this code
 	if(currentWaypoint < waypoint.length){
 		var target : Vector3 = waypoint[currentWaypoint].position;

@@ -124,4 +124,11 @@ function OnTriggerEnter(other:Collider) {
 		health -= 5;
 	}
 	
+//	if (other.tag == "Ghoul" || other.tag == "Ghoul1" || other.tag == "Ghoul_Hospital" || other.tag == "Ghoul_Axe" ||
+//		other.tag == "Ghoul_Nail" || other.tag == "Ghoul_Hammer"|| other.tag == "Ghoul_Wire" || 
+//		other.tag == "Ghoul_Hacksaw"|| other.tag == "Ghoul_Wood") 
+//	{
+//		health -= 5;
+//	}
+	
 }
